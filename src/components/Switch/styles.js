@@ -1,18 +1,18 @@
-import styled from 'styled-components/native'
+import styled from 'styled-components/native';
 
-export const Input = styled.TextInput`
-    height: 48px;
-    margin-bottom: 15px;
-    padding: 12px 16px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    font-size: 15px;
-    color: #444;
+export const Container = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
 
+export const SwitchStyled = styled.Switch.attrs({
+    trackColor: {false: '#d9d9d9', true: 'rgba(88,179,55,0.5)'},
+    thumbColor: "#59B538"
+})`
 `;
 
 export const Label = styled.Text`
-  font-weight: bold;
-  margin-bottom: 5px;
+  margin-right: 5px;
 `;
 

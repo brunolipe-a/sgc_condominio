@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import { Text, TextInput } from 'react-native';
 import { useField } from '@unform/core';
+
+import { InputStyle, Label } from './styles'
 
 export default function Input({ name, label, ...rest }) {
     const inputRef = useRef(null);
@@ -25,8 +26,9 @@ export default function Input({ name, label, ...rest }) {
     }, [fieldName, registerField]);
     return (
         <>
-            {label && <Text>{label}</Text>}
-            <TextInput ref={inputRef} defaultValue={defaultValue} {...rest} />
+            {label && <Label>{label}</Label>}
+            <InputStyle ref={inputRef} defaultValue={defaultValue} {...rest} />
+            { error && <Label>{error}</Label> }
         </>
     );
 }
